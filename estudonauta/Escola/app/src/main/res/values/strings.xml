@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Scholl v1.0</string>
+    <string name="strn1">Grade 1</string>
+    <string name="strn2">Grade 2</string>
+    <string name="strCalc">Calculate</string>
+    <string name="strMedia">Average</string>
+    <string name="strSit">Status</string>
+    <string name="strZero">0</string>
+    <string name="strSitAp">Approved</string>
+    <string name="strSitRc">Retake Test</string>
+    <string name="strSitRp">Disapproved</string>
+    <string name="strMsgAp">Congratulation!</string>
+    <string name="strMsgRc">Study More! it´s still possible!!</string>
+    <string name="strMsgRp">Please try again next year!</string>
+    <string name="msgErro">Type a number!</string>
+</resources>

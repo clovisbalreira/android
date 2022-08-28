@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Name</string>
+    <string name="nome">Whatś your name</string>
+    <string name="botao">Ready</string>
+    <string name="resposta">Answer</string>
+    <string name="finalizando">Nice to meed</string>
+</resources>

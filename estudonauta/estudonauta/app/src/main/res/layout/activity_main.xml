@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d90049"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.402">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/estudonautatopo" />
+
+            <LinearLayout
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnEquipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cianoEscuro"
+                    android:onClick="clickEquipe"
+                    android:text="@string/strEquipe"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/cianoEscuro" />
+
+                <Button
+                    android:id="@+id/btnCursos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="clickCursos"
+                    android:text="@string/strCursos"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/cianoEscuro" />
+
+                <Button
+                    android:id="@+id/btnMidia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="clickMidia"
+                    android:text="@string/strMidia"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/cianoEscuro" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/direitos"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
