@@ -19,18 +19,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtHoje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="99/99/9999"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nomeEditText"
+        android:id="@+id/edtNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -52,24 +51,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomeEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNome" />
 
     <EditText
-        android:id="@+id/diaEditText"
+        android:id="@+id/edtDia"
         android:layout_width="50sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Dia"
-        android:inputType="text"
+        android:inputType="number"
         android:textColor="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/mesEditText"
+        app:layout_constraintEnd_toStartOf="@+id/edtMes"
         app:layout_constraintHorizontal_bias="0.878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/mesEditText"
+        android:id="@+id/edtMes"
         android:layout_width="50sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -78,11 +77,11 @@
         android:hint="Mês"
         android:inputType="date"
         android:textColor="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/anoEditText"
+        app:layout_constraintEnd_toStartOf="@+id/edtAno"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/anoEditText"
+        android:id="@+id/edtAno"
         android:layout_width="80sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -95,25 +94,26 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/respostaTextView"
-        android:layout_width="205dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/txtResposta"
+        android:layout_width="361dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/diaEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDia" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="203dp"
         android:layout_height="51dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:onClick="mostrarSigno"
         android:text="Signo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/respostaTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResposta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
