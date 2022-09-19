@@ -33,7 +33,6 @@ public class Horoscopo {
     }
 
     public void setDiaAt(byte diaAt) {
-        diaAt = 16;
         this.diaAt = diaAt;
     }
 
@@ -62,10 +61,7 @@ public class Horoscopo {
     }
 
     public boolean validarData(){
-        return ((this.getDiaNasc() >= 1 && this.getDiaNasc() <= 31) && (this.getAnoNasc() >= 0) &&
-                (this.getMesNasc() == 1 || this.getMesNasc() == 3 || this.getMesNasc() == 5 || this.getMesNasc() == 7 || this.getMesNasc() == 8 || this.getMesNasc() == 10 || this.getMesNasc() == 12)
-                || ((this.getMesNasc() == 4 || this.getMesNasc() == 6 || this.getMesNasc() == 9 || this.getMesNasc() == 11)  && this.getDiaNasc() <= 30) ||
-                (this.getMesNasc() == 2 && (this.getAnoNasc() % 4 == 0 && ( this.getAnoNasc() % 100 != 0 || this.getAnoNasc() % 400 == 0 ) && this.getDiaNasc() == 29) || this.getDiaNasc() <= 28));
+        return this.getDiaNasc() >= 1 && this.getDiaNasc() <= 31 && this.getMesNasc() >= 1 && this.getMesNasc() <= 12 && this.getAnoNasc() >= 0 && ( (this.getMesNasc() == 1 || this.getMesNasc() == 3 || this.getMesNasc() == 5 || this.getMesNasc() == 7 || this.getMesNasc() == 8 || this.getMesNasc() == 10 || this.getMesNasc() == 12) || ((this.getMesNasc() == 4 || this.getMesNasc() == 6 || this.getMesNasc() == 9 || this.getMesNasc() == 11)  && this.getDiaNasc() <= 30) || (this.getMesNasc() == 2 && (this.getAnoNasc() % 4 == 0 && ( this.getAnoNasc() % 100 != 0 || this.getAnoNasc() % 400 == 0 ) && this.getDiaNasc() == 29) || this.getDiaNasc() <= 28) );
     }
 
     public String mostrarSigno(){
@@ -92,8 +88,10 @@ public class Horoscopo {
                 return "Capricórnio";
             }else if(this.getDiaNasc() >= 21 && this.getMesNasc() == 1 || this.getDiaNasc() <= 18 && this.getMesNasc() == 2){
                 return "Aquário";
-            }else{
+            }else if(this.getDiaNasc() >= 19 && this.getMesNasc() == 2 || this.getDiaNasc() <= 19 && this.getMesNasc() == 3){
                 return "Peixes";
+            }else{
+                return "";
             }
         }else{
             return "";
@@ -123,7 +121,7 @@ public class Horoscopo {
     @Override
     public String toString() {
         if(this.validarData()){
-            return this.validarData() +"   "+ this.getNome() + " você é do signo de " + this.mostrarSigno() + " e tem " + this.calcularIdade() + " anos." + parabenizar();
+            return this.getNome() + " você é do signo de " + this.mostrarSigno() + " e tem " + this.calcularIdade() + " anos." + this.parabenizar();
         }else{
             return "Data Inválida";
         }

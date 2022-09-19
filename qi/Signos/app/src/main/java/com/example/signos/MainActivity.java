@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
     Horoscopo horoscopo;
     EditText nome, dia, mes, ano;
     TextView resposta, hoje;
-    /*SimpleDateFormat diaFormatado = new SimpleDateFormat("dd");
+    SimpleDateFormat diaFormatado = new SimpleDateFormat("dd");
     String diaAgora = diaFormatado.format(new Date());
     SimpleDateFormat mesFormatado = new SimpleDateFormat("MM");
     String mesAgora = mesFormatado.format(new Date());
     SimpleDateFormat anoFormatado = new SimpleDateFormat("yyyy");
-    String anoAgora = anoFormatado.format(new Date());*/
+    String anoAgora = anoFormatado.format(new Date());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         resposta = findViewById(R.id.txtResposta);
         hoje = findViewById(R.id.txtHoje);
         horoscopo = new Horoscopo();
-        //hoje.setText(diaAgora + " / " + mesAgora + " / " + anoAgora);
+        hoje.setText(diaAgora + " / " + mesAgora + " / " + anoAgora);
     }
 
     public void verificarCampo(EditText campo){
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
             verificarCampo(ano);
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
         }else{
-            /*horoscopo.setDiaAt(Byte.parseByte(diaAgora));
+            horoscopo.setDiaAt(Byte.parseByte(diaAgora));
             horoscopo.setMesAt(Byte.parseByte(mesAgora));
-            horoscopo.setAnoAt(Integer.parseInt(anoAgora));*/
+            horoscopo.setAnoAt(Integer.parseInt(anoAgora));
             horoscopo.setNome(nome.getText().toString());
             horoscopo.setDiaNasc(Byte.parseByte(dia.getText().toString()));
             horoscopo.setMesNasc(Byte.parseByte(mes.getText().toString()));
