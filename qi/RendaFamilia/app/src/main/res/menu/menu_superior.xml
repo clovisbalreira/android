@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/icCadastrar"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Adicionar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/icContaListar"
+        android:icon="?android:attr/actionModeFindDrawable"
+        android:title="Conta"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/icPesquisar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Pesquisar"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/icSair"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="Sair"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

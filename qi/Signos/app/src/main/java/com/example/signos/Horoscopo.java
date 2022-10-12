@@ -66,7 +66,110 @@ public class Horoscopo {
 
     public String mostrarSigno(){
         if(validarData()){
-            if(this.getDiaNasc() >= 20 && this.getMesNasc() == 3 || this.getDiaNasc() <= 20 && this.getMesNasc() == 4){
+            switch (this.mesNasc){
+                case 1:
+                    return signo("Capricórnio", "Aquário", 20);
+                case 2:
+                    return signo("Aquário", "Peixes", 18);
+                case 3:
+                    return signo("Peixes", "Áries", 19);
+                case 4:
+                    return signo("Áries", "Touro", 20);
+                case 5:
+                    return signo("Touro", "Gêmeos", 20);
+                case 6:
+                    return signo("Gêmeos", "Câncer", 20);
+                case 7:
+                    return signo("Câncer", "Leão", 21);
+                case 8:
+                    return signo("Leão", "Virgem", 22);
+                case 9:
+                    return signo("Virgem", "Libra", 22);
+                case 10:
+                    return signo("Libra", "Escorpião", 22);
+                case 11:
+                    return signo("Escorpião", "Sagitário", 21);
+                case 12:
+                    return signo("Sagitário", "Capricórnio", 20);
+                default:
+                    return "";
+            }
+                /*case 1:
+                    if(this.diaNasc <= 20 ){
+                        return "Capricórnio";
+                    }else{
+                        return "Aquário";
+                    }
+                case 2:
+                    if(this.diaNasc <= 18 ){
+                        return "Aquário";
+                    }else{
+                        return "Peixes";
+                    }
+                case 3:
+                    if(this.diaNasc <= 19 ){
+                        return "Peixes";
+                    }else{
+                        return "Áries";
+                    }
+                case 4:
+                    if(this.diaNasc <= 20 ){
+                        return "Áries";
+                    }else{
+                        return "Touro";
+                    }
+                case 5:
+                    if(this.diaNasc <= 20 ){
+                        return "Touro";
+                    }else{
+                        return "Gêmeos";
+                    }
+                case 6:
+                    if(this.diaNasc <= 20 ){
+                        return "Gêmeos";
+                    }else{
+                        return "Câncer";
+                    }
+                case 7:
+                    if(this.diaNasc <= 21 ){
+                        return "Câncer";
+                    }else{
+                        return "Leão";
+                    }
+                case 8:
+                    if(this.diaNasc <= 22 ){
+                        return "Leão";
+                    }else{
+                        return "Virgem";
+                    }
+                case 9:
+                    if(this.diaNasc <= 22 ){
+                        return "Virgem";
+                    }else{
+                        return "Libra";
+                    }
+                case 10:
+                    if(this.diaNasc <= 22 ){
+                        return "Libra";
+                    }else{
+                        return "Escorpião";
+                    }
+                case 11:
+                    if(this.diaNasc <= 21 ){
+                        return "Escorpião";
+                    }else{
+                        return "Sagitário";
+                    }
+                case 12:
+                    if(this.diaNasc <= 20 ){
+                        return "Sagitário";
+                    }else{
+                        return "Capricórnio";
+                    }
+                default:
+                    return "";
+            }*/
+            /*if(this.getDiaNasc() >= 20 && this.getMesNasc() == 3 || this.getDiaNasc() <= 20 && this.getMesNasc() == 4){
                 return "Áries";
             }else if(this.getDiaNasc() >= 21 && this.getMesNasc() == 4 || this.getDiaNasc() <= 20 && this.getMesNasc() == 5){
                 return "Touro";
@@ -92,19 +195,23 @@ public class Horoscopo {
                 return "Peixes";
             }else{
                 return "";
-            }
+            }*/
         }else{
             return "";
         }
     }
 
+    public String signo(String primeiro, String segundo, int dia){
+        if(this.diaNasc <= dia ){
+            return primeiro;
+        }else{
+            return segundo;
+        }
+    }
+
     public byte calcularIdade(){
-        if(this.getMesAt() <= this.getMesNasc()){
-            if(this.getDiaAt() < this.getDiaNasc()){
-                return (byte) (this.getAnoAt() - this.getAnoNasc() - 1 );
-            }else{
-                return (byte) (this.getAnoAt() - this.getAnoNasc());
-            }
+        if(this.getMesAt() <= this.getMesNasc() && this.getDiaAt() < this.getDiaNasc()){
+            return (byte) (this.getAnoAt() - this.getAnoNasc() - 1 );
         }else{
             return (byte) (this.getAnoAt() - this.getAnoNasc());
         }
@@ -121,7 +228,11 @@ public class Horoscopo {
     @Override
     public String toString() {
         if(this.validarData()){
-            return this.getNome() + " você é do signo de " + this.mostrarSigno() + " e tem " + this.calcularIdade() + " anos." + this.parabenizar();
+            return "Dados pessoais:\n"+
+                    "Data de Nascimento: " + this.diaNasc + "/" + this.mesNasc + "/" + this.anoNasc + "\n" +
+                    "Data Atual: " + this.diaAt + "/" + this.mesAt + "/" + anoAt + "\n" +
+                    this.getNome() + ", você é do signo de " + this.mostrarSigno() + " e tem " + this.calcularIdade() + " anos." + this.parabenizar();
+            //return this.getNome() + " você é do signo de " + this.mostrarSigno() + " e tem " + this.calcularIdade() + " anos." + this.parabenizar();
         }else{
             return "Data Inválida";
         }

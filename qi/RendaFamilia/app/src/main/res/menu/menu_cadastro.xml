@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/icListar"
+        android:icon="?attr/actionModePasteDrawable"
+        android:title="Listar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/icConta"
+        android:icon="?android:attr/actionModeFindDrawable"
+        android:title="Conta"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/icSairListar"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="Sair"
+        app:showAsAction="ifRoom" />
+</menu>
